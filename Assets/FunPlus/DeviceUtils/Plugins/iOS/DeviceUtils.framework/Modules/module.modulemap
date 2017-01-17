@@ -1,0 +1,10 @@
+framework module DeviceUtils {
+  umbrella header "DeviceUtils.h"
+
+  export *
+  module * { export * }
+}
+
+module DeviceUtils.Swift {
+    header "DeviceUtils-Swift.h"
+}

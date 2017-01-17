@@ -1,0 +1,12 @@
+{
+    "group": "DeviceUtils",
+    "libs": [],
+    "frameworks": [],
+    "embed_binaries": ["DeviceUtils.framework"],
+    "headerpaths": [],
+    "files":   ["DeviceUtilsUnityBridge.mm"],
+    "folders": [],
+    "excludes": ["^.*.meta$", "^.*.mdown$", "^.*.pdf$"],
+    "compiler_flags": [],
+    "linker_flags": []
+}
