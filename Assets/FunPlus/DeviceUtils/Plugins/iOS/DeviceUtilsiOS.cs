@@ -42,49 +42,49 @@ namespace FunPlus.DeviceUtils
 		private static extern void _setScreenBrightness (float brightness);
 
 
-		public static string getIdentifierForVendor ()
+		public static string GetIdentifierForVendor ()
 		{
 			return _getIdentifierForVendor ();
 		}
 
-		public static string getAdvertisingIdentifier ()
+		public static string GetAdvertisingIdentifier ()
 		{
 			return _getAdvertisingIdentifier ();
 		}
 
-		public static string getModelName ()
+		public static string GetModelName ()
 		{
 			return _getModelName ();
 		}
 
-		public static string getSystemName ()
+		public static string GetSystemName ()
 		{
 			return _getSystemName ();
 		}
 
-		public static string getSystemVersion ()
+		public static string GetSystemVersion ()
 		{
 			return _getSystemVersion ();
 		}
 
-		public static string getAppName ()
+		public static string GetAppName ()
 		{
 			return _getAppName ();
 		}
 
-		public static string getAppVersion ()
+		public static string GetAppVersion ()
 		{
 			return _getAppVersion ();
 		}
 
-		public static string getAppLanguage ()
+		public static string GetAppLanguage ()
 		{
 			return _getAppLanguage ();
 		}
 
-		public static bool setScreenBrightness (float brightness)
+		public static bool SetScreenBrightness (int brightness)
 		{
-			return _setScreenBrightness (brightness);
+			return _SetScreenBrightness (brightness);
 		}
 	}
 

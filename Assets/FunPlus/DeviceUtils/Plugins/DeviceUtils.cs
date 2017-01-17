@@ -9,171 +9,175 @@ namespace FunPlus.DeviceUtils
 		private const string CALLING_IN_UNITY_EDITOR = "Calling DeviceUtis.{0} in the Unity Editor";
 		private const string UNSUPPORTED_PLATFORM = "Error calling DeviceUtils.{0}: unsupported platform";
 
-		public static string getIdentifierForVendor ()
+		public static string GetIdentifierForVendor ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getIdentifierForVendor()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetIdentifierForVendor()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getIdentifierForVendor ();
+			return DeviceUtilsiOS.GetIdentifierForVendor ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getIdentifierForVendor()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetIdentifierForVendor()");
 			#endif
 		}
 
-		public static string getAdvertisingIdentifier ()
+		public static string GetAdvertisingIdentifier ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getAdvertisingIdentifier()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetAdvertisingIdentifier()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getAdvertisingIdentifier ();
+			return DeviceUtilsiOS.GetAdvertisingIdentifier ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getAdvertisingIdentifier()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetAdvertisingIdentifier()");
 			#endif
 		}
 
-		public static string getAndroidId ()
+		public static string GetAndroidId ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getAndroidId()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetAndroidId()");
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getAndroidId ();
+			return DeviceUtilsAndroid.GetAndroidId ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getAndroidId()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetAndroidId()");
 			#endif
 		}
 
-		public static string getPlayAdvertisingId ()
+		public static string GetPlayAdId ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getPlayAdvertisingId()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetPlayAdId()");
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getPlayAdvertisingId ();
+			return DeviceUtilsAndroid.GetPlayAdId ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getPlayAdvertisingId()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetPlayAdId()");
 			#endif
 		}
 
-		public static string getModelName ()
+		public static string GetModelName ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getModelName()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetModelName()");
 			#elif UNITY_IOS
+			return DeviceUtilsiOS.GetModelName ();
 			#elif UNITY_ANDROID
+			return DeviceUtilsAndroid.GetModelName ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getModelName()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetModelName()");
 			#endif
 		}
 
-		public static string getManufacturer ()
+		public static string GetManufacturer ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getManufacturer()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetManufacturer()");
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getManufacturer ();
+			return DeviceUtilsAndroid.GetManufacturer ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getManufacturer()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetManufacturer()");
 			#endif
 		}
 
-		public static string getSystemName ()
+		public static string GetSystemName ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getSystemName()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetSystemName()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getSystemName ();
+			return DeviceUtilsiOS.GetSystemName ();
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getSystemName ();
+			return DeviceUtilsAndroid.GetSystemName ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getSystemName()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetSystemName()");
 			#endif
 		}
 
-		public static string getSystemVersion ()
+		public static string GetSystemVersion ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getSystemVersion()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetSystemVersion()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getSystemVersion ();
+			return DeviceUtilsiOS.GetSystemVersion ();
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getSystemVersion ();
+			return DeviceUtilsAndroid.GetSystemVersion ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getSystemVersion()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetSystemVersion()");
 			#endif
 		}
 
-		public static string getAndroidApiLevel ()
+		public static string GetAndroidApiLevel ()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getAndroidApiLevel()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetAndroidApiLevel()");
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getAndroidApiLevel ();
+			return DeviceUtilsAndroid.GetAndroidApiLevel ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getAndroidApiLevel()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetAndroidApiLevel()");
 			#endif
 		}
 
-		public static string getAppName()
+		public static string GetAppName()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getAppName()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetAppName()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getAppName ();
+			return DeviceUtilsiOS.GetAppName ();
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getAppName ();
+			return DeviceUtilsAndroid.GetAppName ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getAppName()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetAppName()");
 			#endif
 		}
 
-		public static string getAppVersion()
+		public static string GetAppVersion()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getAppVersion()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetAppVersion()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getAppVersion ();
+			return DeviceUtilsiOS.GetAppVersion ();
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getAppVersion ();
+			return DeviceUtilsAndroid.GetAppVersion ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getAppVersion()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetAppVersion()");
 			#endif
 		}
 
-		public static string getAppLanguage()
+		public static string GetAppLanguage()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getAppLanguage()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetAppLanguage()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getAppLanguage ();
+			return DeviceUtilsiOS.GetAppLanguage ();
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getAppLanguage ();
+			return DeviceUtilsAndroid.GetAppLanguage ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getAppLanguage()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetAppLanguage()");
 			#endif
 		}
 
-		public static string getNetworkCarrierName()
+		public static string GetNetworkCarrierName()
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "getNetworkCarrierName()");
+			return string.Format (CALLING_IN_UNITY_EDITOR, "GetNetworkCarrierName()");
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.getNetworkCarrierName ();
+			return DeviceUtilsiOS.GetNetworkCarrierName ();
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.getNetworkCarrierName ();
+			return DeviceUtilsAndroid.GetNetworkCarrierName ();
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "getNetworkCarrierName()");
+			return string.Format (UNSUPPORTED_PLATFORM, "GetNetworkCarrierName()");
 			#endif
 		}
 
-		public static bool setScreenBrightness(float brightness)
+		public static bool SetScreenBrightness(int brightness)
 		{
 			#if UNITY_EDITOR
-			return string.Format (CALLING_IN_UNITY_EDITOR, "setScreenBrightness()");
+			Debug.LogFormat (CALLING_IN_UNITY_EDITOR, "SetScreenBrightness()");
+			return false;
 			#elif UNITY_IOS
-			return DeviceUtilsiOS.setScreenBrightness (brightness);
+			return DeviceUtilsiOS.SetScreenBrightness (brightness);
 			#elif UNITY_ANDROID
-			return DeviceUtilsAndroid.setScreenBrightness (brightness);
+			return DeviceUtilsAndroid.SetScreenBrightness (brightness);
 			#else
-			return string.Format (UNSUPPORTED_PLATFORM, "setScreenBrightness()");
+			Debug.LogFormat (CALLING_IN_UNITY_EDITOR, "SetScreenBrightness()");
+			return false;
 			#endif
 		}
 	}
