@@ -168,6 +168,18 @@ namespace FunPlus.DeviceUtils
 			#endif
 		}
 
+		public static int GetScreenBrightness ()
+		{
+			#if UNITY_EDITOR
+			Debug.LogFormat (CALLING_IN_UNITY_EDITOR, "GetScreenBrightness()");
+			return 0;
+			#elif UNITY_IOS
+			return DeviceUtilsiOS.GetScreenBrightness ();
+			#elif UNITY_ANDROID
+			return DeviceUtilsAndroid.GetScreenBrightness ();
+			#endif
+		}
+
 		public static bool SetScreenBrightness(int brightness)
 		{
 			#if UNITY_EDITOR

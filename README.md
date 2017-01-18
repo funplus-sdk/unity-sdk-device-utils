@@ -128,6 +128,14 @@ string appLanguage = DeviceUtils.GetAppLanguage ();
 string carrier = DeviceUtils.GetNetworkCarrierName ();
 ```
 
+### Get Screen Brightness
+
+This method returns an integer ranged from 0 to 255 inclusively.
+
+```c#
+int brightness = DeviceUtils.GetScreenBrightness ();
+```
+
 ### Set Screen Brightness
 
 For Android project, add the following permission declaration before the `application` tag in your `AndroidManifest.xml` if they're not present already.

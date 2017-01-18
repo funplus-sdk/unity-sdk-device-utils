@@ -39,6 +39,9 @@ namespace FunPlus.DeviceUtils
 		private static extern string _getNetworkCarrierName ();
 
 		[DllImport ("__Internal")]
+		private static extern int _getScreenBrightness ();
+
+		[DllImport ("__Internal")]
 		private static extern bool _setScreenBrightness (int brightness);
 
 
@@ -85,6 +88,11 @@ namespace FunPlus.DeviceUtils
 		public static string GetNetworkCarrierName ()
 		{
 			return _getNetworkCarrierName ();
+		}
+
+		public static int GetScreenBrightness ()
+		{
+			return _getScreenBrightness ();
 		}
 
 		public static bool SetScreenBrightness (int brightness)

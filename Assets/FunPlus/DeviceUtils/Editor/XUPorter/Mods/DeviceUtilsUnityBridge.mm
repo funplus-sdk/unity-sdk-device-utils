@@ -58,6 +58,11 @@ extern "C"
         return strdup([networkCarrierName UTF8String]);
     }
 
+    int _getScreenBrightness() {
+        CGFloat value = [DeviceUtilsOC getScreenBrightness];
+        return (int) (value * 255.0);
+    }
+
     bool _setScreenBrightness(int brightness) {
         CGFloat value = brightness / 255.0;
         return [DeviceUtilsOC setScreenBrightnessWithBrightness: value];

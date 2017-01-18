@@ -20,9 +20,13 @@ public class UIScript : MonoBehaviour {
 		Debug.LogFormat ("App language: {0}", DeviceUtils.GetAppLanguage ());
 		Debug.LogFormat ("Network carrier: {0}", DeviceUtils.GetNetworkCarrierName ());
 
-		int brightness = 20;
+		Debug.LogFormat ("Screen brightness before modifying: {0}", DeviceUtils.GetScreenBrightness ());
+
+		int brightness = Random.Range (1, 256);
 		bool isSuccess = DeviceUtils.SetScreenBrightness (brightness);
 		Debug.LogFormat ("Set screen brightness: {0}", isSuccess ? "true" : "false");
+
+		Debug.LogFormat ("Screen brightness after modifying: {0}", DeviceUtils.GetScreenBrightness ());
 	}
 	
 	// Update is called once per frame
