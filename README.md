@@ -32,15 +32,7 @@ The `Example` directory is not necessarily a part of the SDK. You can choose not
 
 ### For Android Project Only
 
-When exporting your game to Android project, there're some extra work to complete.
-
-**Add Google Play Services**
-
-FunPlus SDK uses the [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) to uniquely identify devices. To allow the SDK to use the Google Advertising ID, you must integrate the [Google Play Services](http://developer.android.com/google/play-services/setup.html). If you haven't done this yet, please open the `build.gradle` file of your app and add the following line to the `dependencies` block:
-
-```groovy
-compile 'com.google.android.gms:play-services-analytics:9.4.0'
-```
+FunPlus SDK uses the [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) to uniquely identify devices. To allow the SDK to use the Google Advertising ID, you must integrate the [Google Play Services](http://developer.android.com/google/play-services/setup.html).
 
 ## Usage
 
