@@ -6,6 +6,8 @@ namespace FunPlus.DeviceUtils
 
 	public class DeviceUtils
 	{
+		public static string VERSION = "4.0.0";
+
 		private const string CALLING_IN_UNITY_EDITOR = "Calling DeviceUtis.{0} in the Unity Editor";
 		private const string UNSUPPORTED_PLATFORM = "Error calling DeviceUtils.{0}: unsupported platform";
 
