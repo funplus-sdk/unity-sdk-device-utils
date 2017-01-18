@@ -87,6 +87,11 @@ namespace FunPlus.DeviceUtils
 			return ResolveAndCallApi<string> ("getNetworkCarrierName", new object[] { AndroidApplication });
 		}
 
+		public static int GetScreenBrightness ()
+		{
+			return ResolveAndCallApi<int> ("getScreenBrightness", new object[] { AndroidApplication });
+		}
+
 		public static bool SetScreenBrightness (int brightness)
 		{
 			return ResolveAndCallApi<bool> ("setScreenBrightness", new object[] { AndroidApplication, brightness });
