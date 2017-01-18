@@ -133,6 +133,7 @@ SWIFT_CLASS("_TtC11DeviceUtils13DeviceUtilsOC")
 + (NSString * _Nonnull)getAppVersion;
 + (NSString * _Nonnull)getAppLanguage;
 + (NSString * _Nonnull)getNetworkCarrierName;
++ (CGFloat)getScreenBrightness;
 + (BOOL)setScreenBrightnessWithBrightness:(CGFloat)brightness;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
