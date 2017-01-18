@@ -13,7 +13,7 @@
 
 ## Integration
 
-Import the SDK package  `funplus-unity-sdk-<version>.unitypackage` to your project.
+Import the SDK package  `funplus-unity-sdk-device-utils-<version>.unitypackage` to your project.
 
 The FunPlus SDK is structured in this way:
 
@@ -23,7 +23,7 @@ Assets/
     └── DeviceUtils/
         ├── Editor/
         ├── Example/
-        └── Plugins
+        └── Plugins/
             ├── Android/
             └── iOS/
 ```
@@ -42,105 +42,113 @@ FunPlus SDK uses the [Google Advertising ID](https://support.google.com/googlepl
 compile 'com.google.android.gms:play-services-analytics:9.4.0'
 ```
 
-**Add `WRITE_SETTINGS` permission**
-
-Add the following permission declaration before the `application` tag in your `AndroidManifest.xml` if they're not present already.
-
-```xml
-<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-```
-
 ## Usage
 
 To call methods provided by `DeviceUtils`, the first step is to import its namespace to your source files:
 
 ```c#
-using namespace FunPlus.DeviceUtils;
+using FunPlus.DeviceUtils;
 ```
 
-### Get the Play Advertising ID (Android Only)
+### Get Play Advertising ID (Android Only)
+
+This method might return `null`.
 
 ```c#
 string playAdId = DeviceUtils.GetPlayAdId ();
 ```
 
-The returning value might be null.
-
-### Get the Android ID (Android Only)
+### Get Android ID (Android Only)
 
 ```c#
 string androidId = DeviceUtils.GetAndroidId ();
 ```
 
-### Get the Identifier for Vendor (iOS Only)
+### Get Identifier for Vendor (iOS Only)
+
+This method might return `null`.
 
 ```c#
 string idfv = DeviceUtils.GetIdentifierForVendor ();
 ```
 
-The returning value might be null.
+### Get Advertising Identifier (iOS Only)
 
-### Get the Advertising Identifier (iOS Only)
+This method might return `null`.
 
 ```c#
 string idfa = DeviceUtils.GetAdvertisingIdentifier ();
 ```
 
-### Get the System Name
+### Get System Name
 
 ```c#
 string systemName = DeviceUtils.GetSystemName ();
 ```
 
-### Get the System Version
+### Get System Version
 
 ```c#
 string systemVersion = DeviceUtils.GetSystemVersion ();
 ```
 
-### Get Device's Model Name
+### Get Device Model Name
 
 ```c#
 string modelName = DeviceUtils.GetModelName ();
 ```
 
-### Get Device's Manufacturer (Android Only)
+### Get Device Manufacturer (Android Only)
 
 ```c#
 string manufacturer = DeviceUtils.GetManufacturer ();
 ```
 
-### Get App's Name
+### Get Android API Level (Android Only)
+
+```c#
+string androidApiLevel = DeviceUtils.GetAndroidApiLevel ();
+```
+
+### Get App Name
 
 ```c#
 string appName = DeviceUtils.GetAppName ();
 ```
 
-### Get App's Version
+### Get App Version
 
 ```c#
 string appVersion = DeviceUtils.GetAppVersion ();
 ```
 
-### Get App's Language
+### Get App Display Language
+
+This method gets the display language for the application, it might be different from the device language.
 
 ```c#
 string appLanguage = DeviceUtils.GetAppLanguage ();
 ```
 
-### Get the Network Carrier Name
+### Get Network Carrier Name
 
 ```c#
 string carrier = DeviceUtils.GetNetworkCarrierName ();
 ```
 
-### Set the Screen Brightness
+### Set Screen Brightness
+
+For Android project, add the following permission declaration before the `application` tag in your `AndroidManifest.xml` if they're not present already.
+
+```xml
+<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+```
+
+Note that on Android 6.0+, it will return false and lead the user to a window that requests the `WRITE_SETTINGS` permission for the first time this method is called.
+
+Value of the `brightness` parameter should be between 0 and 255. values less than 0 will be treat as 0, and values greater than 255 will be treat as 255.
 
 ```c#
 int brightness = 120;
 bool isSuccess = DeviceUtils.SetScreenBrightness (brightness);
 ```
-
-Value of the `brightness` parameter should be between 0 and 255. values less than 0 will be treat as 0, and values greater than 255 will be treat as 255.
-
-Note that on Android 6.0+, it will return false and lead the user to a window that requests the `WRITE_SETTINGS` permission for the first time this method is called.
